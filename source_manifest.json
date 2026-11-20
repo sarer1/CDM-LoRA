@@ -1,0 +1,20 @@
+{
+  "archived_source_digest": "b637fa9543e2e8ada0f009af211da246645292f7654d584ac4bc96557be99f40",
+  "generated_sha256": {
+    "MedSAM/UNetFormer_MMSAM.py": "e2aada10f8cb44c0ae40a5c72ab343e16efc72ecc628b54608b68e867c65b700",
+    "MedSAM/models/ImageEncoder/__init__.py": "91f906d31cbba0e3207e6ac05da500f4f83d95e6daad15e21ae54d829b8e646a",
+    "MedSAM/models/ImageEncoder/vit/__init__.py": "91f906d31cbba0e3207e6ac05da500f4f83d95e6daad15e21ae54d829b8e646a",
+    "MedSAM/models/ImageEncoder/vit/mm_dinov3.py": "33c40a2e931e84eec352e4533c18dc000249475cddbc5c1f01a25bf903c66446",
+    "MedSAM/models/ImageEncoder/vit/mm_lora_block.py": "bef193594e68593d28b37992723b344d3734d6fe78bc1c300e082ad236a9f284",
+    "MedSAM/models/common/__init__.py": "1668eb95dd5c229c0a2a50e9a2a87eab00df9d758dfd5fcaed78c7219ec594bb",
+    "MedSAM/models/common/loralib/__init__.py": "bd4f15a453d94c81495b0b62397a7b67b2db9d08e9059ed4dfecc1a53f7840ea",
+    "MedSAM/models/common/loralib/layers.py": "ad851112caf13a260c1f8344bf6821c6056ddad43fb8e33b337492902844e8d8",
+    "MedSAM/official_head.py": "779e79cd6c9ac4f62498e363137810b61c0bbd40e04aa2244349ed297c85c3ad",
+    "division.txt": "4e230c720c49a6e369c699fb8374da020b5c593752a7b10aa1a5cd2271369e8b",
+    "inference.py": "522eb080acd3fefa0e857bbf03b10208cf55fcdc4511ddd790fee8762d9d6b02",
+    "mm_encoder.py": "e43e7d1e76b6bc082647a5b040dfc8cd1aee71be06be572c8218dde532a591e3",
+    "train.py": "183e858d728fb64ede577d8e43a118e14cfa0c9be99d99a25f748ac9686c434f",
+    "utils.py": "2e7463211e374306e066552b8cd2365b443549f55519a7fb77190fe4ab8ba431"
+  },
+  "generated_digest": "952f4bfa9926c7014672b26e40effdd721d2631d69295523f8d00b37f77bf053"
+}

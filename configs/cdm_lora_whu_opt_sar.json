@@ -1,0 +1,78 @@
+{
+  "schema": 2,
+  "recipe": {
+    "condition": "cdm_lora",
+    "dataset": "WHU-OPT-SAR",
+    "seed": 42,
+    "epochs": 30,
+    "iters_per_epoch": 1000,
+    "batch_size": 10,
+    "learning_rate": 0.0001,
+    "patience": 100,
+    "test_stride": 32,
+    "rank": 8,
+    "gpu": 0,
+    "readout_auxiliary_weight": 0.25,
+    "output_sampling_probability": 0.3,
+    "mlp_lora_scale": 1.0
+  },
+  "mechanism": {
+    "auxiliary_ce": true,
+    "source_modulation": true,
+    "head_refinement": false,
+    "cross_mode": "relation",
+    "gate_source": "class_readout",
+    "class_feedback": true
+  },
+  "dataset_protocol": {
+    "classes": 8,
+    "eval_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "val_stride": 256,
+    "tiles": [
+      "NH49E001014",
+      "NH49E001017",
+      "NH49E002012",
+      "NH49E002016",
+      "NH49E003014",
+      "NH49E003024",
+      "NH49E004011",
+      "NH49E005011",
+      "NH49E005019",
+      "NH49E006019",
+      "NH49E007014",
+      "NH49E008013",
+      "NH49E009017",
+      "NH49E010020",
+      "NH49E011024",
+      "NH49E012020",
+      "NH49E013010",
+      "NH50E007002",
+      "NH50E011005",
+      "NH50E014003"
+    ]
+  },
+  "feedback": "softmax(Wc z) through Be",
+  "head_pixel_losses": true,
+  "output_sampling_probability": 0.3,
+  "readout_auxiliary_weight": 0.25,
+  "expected_mmlinear_sites": 48,
+  "checkpoint_selection_horizons": [],
+  "code": {
+    "source": "952f4bfa9926c7014672b26e40effdd721d2631d69295523f8d00b37f77bf053",
+    "runtime": {
+      "experiment_runtime.py": "b546c3824948be8f504184bd55b8242adf41089a4935d2f3ea7aa66b0a506195",
+      "experiment_config.py": "44d847feb3bbe6deb584682768bd8739871edbf8002f95bd1b3316d920603aa8",
+      "checkpoint_selection.py": "815835444248c4f52ad444bdf9fb7f820610c4a76d5bdd3755cdbd5f10ff543d"
+    }
+  },
+  "pretrained_sha256": "95bc6251ea8857bd94ce733786f7cc420c5cc009515781579015ade1965776f4",
+  "fingerprint": "ddfcb98f2ec49d274090d8f30036aef52d2a774d85e2f07ac5210ba2eb3187c9"
+}

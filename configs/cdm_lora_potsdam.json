@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "recipe": {
+    "condition": "cdm_lora",
+    "dataset": "Potsdam",
+    "seed": 42,
+    "epochs": 30,
+    "iters_per_epoch": 1000,
+    "batch_size": 10,
+    "learning_rate": 0.0001,
+    "patience": 100,
+    "test_stride": 32,
+    "rank": 8,
+    "gpu": 0,
+    "readout_auxiliary_weight": 0.25,
+    "output_sampling_probability": 0.3,
+    "mlp_lora_scale": 1.0
+  },
+  "mechanism": {
+    "auxiliary_ce": true,
+    "source_modulation": true,
+    "head_refinement": false,
+    "cross_mode": "relation",
+    "gate_source": "class_readout",
+    "class_feedback": true
+  },
+  "dataset_protocol": {
+    "classes": 6,
+    "eval_ids": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "val_stride": 256,
+    "tiles": [
+      "4_10",
+      "5_11",
+      "2_11",
+      "3_10",
+      "6_11",
+      "7_12"
+    ]
+  },
+  "feedback": "softmax(Wc z) through Be",
+  "head_pixel_losses": true,
+  "output_sampling_probability": 0.3,
+  "readout_auxiliary_weight": 0.25,
+  "expected_mmlinear_sites": 48,
+  "checkpoint_selection_horizons": [],
+  "code": {
+    "source": "952f4bfa9926c7014672b26e40effdd721d2631d69295523f8d00b37f77bf053",
+    "runtime": {
+      "experiment_runtime.py": "b546c3824948be8f504184bd55b8242adf41089a4935d2f3ea7aa66b0a506195",
+      "experiment_config.py": "44d847feb3bbe6deb584682768bd8739871edbf8002f95bd1b3316d920603aa8",
+      "checkpoint_selection.py": "815835444248c4f52ad444bdf9fb7f820610c4a76d5bdd3755cdbd5f10ff543d"
+    }
+  },
+  "pretrained_sha256": "95bc6251ea8857bd94ce733786f7cc420c5cc009515781579015ade1965776f4",
+  "fingerprint": "7ac503de94a0c3429388c004c66a916bf0eeca98428f7ad87db929c3c2f0e4c7"
+}
